@@ -2,4 +2,6 @@ Makefile
 .jshintrc
 .editorconfig
 .travis.yml
+.npmignore
 test
+example
