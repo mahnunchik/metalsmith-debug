@@ -1,0 +1,29 @@
+{
+  "name": "metalsmith-debug",
+  "version": "0.0.1",
+  "description": "A Metalsmith plugin to debug Metalsmith and plugins",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/mahnunchik/metalsmith-debug.git"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "make lint"
+  },
+  "keywords": [
+    "metalsmith",
+    "debug"
+  ],
+  "author": {
+    "name": "Eugeny Vlasenko",
+    "email": "mahnunchik@gmail.com",
+    "url": "http://mahnunchik.tumblr.com/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^1.0.2"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.1"
+  }
+}
