@@ -22,14 +22,14 @@ Install via npm and then add the `metalsmith-debug` key to your `metalsmith.json
 Then you can:
 
 ```
-$ debug=metalsmith:* metalsmith
+$ DEBUG=metalsmith:* metalsmith
 ```
 To see all debug messages.
 
 Or you can use namespaces to see only necessary messages:
 
 ```
-$ debug=metalsmith:files metalsmith
+$ DEBUG=metalsmith:files metalsmith
 ```
 
 Available namespaces:
