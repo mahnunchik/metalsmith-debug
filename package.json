@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-debug",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "A Metalsmith plugin to debug Metalsmith and plugins",
   "repository": {
     "type": "git",
