@@ -2,9 +2,9 @@
   "name": "metalsmith-debug",
   "version": "0.0.2",
   "description": "A Metalsmith plugin to debug Metalsmith and plugins",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/mahnunchik/metalsmith-debug.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mahnunchik/metalsmith-debug.git"
   },
   "main": "lib/index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "debug": "^1.0.2"
+    "debug": "^2.2.0"
   },
   "devDependencies": {
     "jshint": "^2.5.1"
