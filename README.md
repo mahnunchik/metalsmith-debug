@@ -39,6 +39,18 @@ Available namespaces:
 * metalsmith:metadata
 * metalsmith:files
 
+If you want to debug a specific plugin you must name it:
+
+```
+$ DEBUG=metalsmith-collections metalsmith
+```
+
+You can specify multiple namespaces to debug by separating them with commas:
+
+```
+$ DEBUG=metalsmith:source,metalsmith-collections metalsmith
+```
+
 ## Javascript Usage
 
 Pass `metalsmith-debug` plugin to Metalsmith with the `use` method:
