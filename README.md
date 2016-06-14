@@ -68,7 +68,7 @@ metalsmith.use(debug());
 
 ## Options
 
-In case you want to use `.use(debug())` several times in your Metalsmith chain you have some options to switch off some of the `metalsmith:*` namespaces. Additionally, you can add some arbitrary log text. Furthermore you can filter for files if you only want to monitor certain files. The filter option is based on the globbing patterns implemented by [multimatch](https://github.com/sindresorhus/multimatch).
+In case you want to use `.use(debug())` several times in your Metalsmith chain you have some options to switch off some of the `metalsmith:*` namespaces. Additionally, you can add some arbitrary log text. Furthermore you can apply file matching if you only want to monitor certain files. The `match` option is based on the globbing patterns implemented by [multimatch](https://github.com/sindresorhus/multimatch).
 
 ```js
 var debug = require('metalsmith-debug');
@@ -79,7 +79,7 @@ metalsmith.use(debug({
   source: false,           // default: true
   destination: false,      // default: true
   files: true,             // default: true
-  filter: "**/*.md"        // default: all files
+  match: "**/*.md"         // default: all files
 }));
 ```
 
