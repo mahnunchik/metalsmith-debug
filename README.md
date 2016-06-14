@@ -1,6 +1,6 @@
 # metalsmith-debug
 
-A Metalsmith plugin to debug Metalsmith and plugins.
+A Metalsmith plugin to debug Metalsmith and plugins. It is a thin wrapper around [debug](https://github.com/visionmedia/debug) making use of its namespaces and logging functionality.
 
 ## Installation
 
@@ -19,25 +19,30 @@ Install via npm and then add the `metalsmith-debug` key to your `metalsmith.json
   }
 }
 ```
-Then you can:
+
+## Available namespaces
+
+Available namespaces defined by `metalsmith-debug` are:
+
+* metalsmith:source
+* metalsmith:destination
+* metalsmith:metadata
+* metalsmith:files
+* metalsmith:log
+
+To see debug messages, you must set a `DEBUG` environment variable to the desired namespaces.
+
+For all debug messages you can define:
 
 ```
 $ DEBUG=metalsmith:* metalsmith
 ```
-To see all debug messages.
 
 Or you can use namespaces to see only necessary messages:
 
 ```
 $ DEBUG=metalsmith:files metalsmith
 ```
-
-Available namespaces:
-
-* metalsmith:source
-* metalsmith:destination
-* metalsmith:metadata
-* metalsmith:files
 
 If you want to debug a specific plugin you must name it:
 
@@ -60,6 +65,25 @@ var debug = require('metalsmith-debug');
 
 metalsmith.use(debug());
 ```
+
+## Options
+
+In case you want to use `.use(debug())` several times in your Metalsmith chain you have some options to switch off some of the `metalsmith:*` namespaces. Additionally, you can add some arbitrary log text. Furthermore you can filter for files if you only want to monitor certain files. The filter option is based on the globbing patterns implemented by [multimatch](https://github.com/sindresorhus/multimatch).
+
+```js
+var debug = require('metalsmith-debug');
+
+metalsmith.use(debug({
+  log: "first debug",      // any comment you like
+  metadata: false,         // default: true
+  source: false,           // default: true
+  destination: false,      // default: true
+  files: true,             // default: true
+  filter: "**/*.md"        // default: all files
+}));
+```
+
+
 
 ## License
 
