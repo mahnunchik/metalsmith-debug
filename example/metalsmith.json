@@ -9,8 +9,9 @@
     "metalsmith-permalinks": {
       "pattern": ":title"
     },
-    "metalsmith-templates": {
-      "engine": "handlebars"
+    "metalsmith-layouts": {
+      "engine": "handlebars",
+      "directory": "templates"
     }
   }
 }
