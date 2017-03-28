@@ -32,10 +32,10 @@ Available namespaces defined by `metalsmith-debug` are:
 
 To see debug messages, you must set a `DEBUG` environment variable to the desired namespaces.
 
-For all debug messages you can define:
+For all debug messages you can define an OS environment variable:
 
 ```
-$ DEBUG=metalsmith:* metalsmith
+$ DEBUG=metalsmith* metalsmith
 ```
 
 Or you can use namespaces to see only necessary messages:
@@ -55,6 +55,8 @@ You can specify multiple namespaces to debug by separating them with commas:
 ```
 $ DEBUG=metalsmith:source,metalsmith-collections metalsmith
 ```
+
+NOTE: On OSX you can do this using the terminal command: export "DEBUG=metalsmith* metalsmith" 
 
 ## Javascript Usage
 
