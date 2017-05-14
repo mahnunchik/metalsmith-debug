@@ -1,5 +1,7 @@
 # metalsmith-debug
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mahnunchik/metalsmith-debug.svg)](https://greenkeeper.io/)
+
 A Metalsmith plugin to debug Metalsmith and plugins. It is a thin wrapper around [debug](https://github.com/visionmedia/debug) making use of its namespaces and logging functionality.
 
 ## Installation
